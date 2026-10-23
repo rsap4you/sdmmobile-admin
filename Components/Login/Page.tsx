@@ -7,7 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { BiLoaderCircle } from "react-icons/bi";
 import { useAppDispatch } from "@/redux/store";
 import { LoginUser } from "@/redux/auth/auth-action";
-
+import Image from "next/image";
 const schema = yup.object().shape({
   password: yup.string().required("Password is required"),
 });
@@ -35,10 +35,19 @@ const Login = () => {
         <div className="auth-form">
           <div className="card">
             <div className="card-body">
-              <div className="text-center mb-4">
-                <h3 className="fw-bold mb-1">SDM Admin</h3>
-                <p className="text-muted mb-0">Shree Dhandai Mata Mobile</p>
-              </div>
+           <div className="text-center mb-4">
+  <Image
+    src="/logo.png"
+    alt="SDM Mobile Logo"
+    width={80}
+    height={80}
+    priority
+    className="mb-3"
+    style={{ objectFit: "contain" }}
+  />
+  <h3 className="fw-bold mb-1">SDM Admin</h3>
+  <p className="text-muted mb-0">Shree Dhandai Mata Mobile</p>
+</div>
               <h5 className="text-center f-w-500 mt-3">Enter the admin password</h5>
 
               <form className="row g-3" onSubmit={formik.handleSubmit}>
