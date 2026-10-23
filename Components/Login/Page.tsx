@@ -37,13 +37,13 @@ const Login = () => {
             <div className="card-body">
               <div className="d-flex align-items-center justify-content-center gap-3 mb-4">
                 <Image
-                  src="/logo.png"
-                  alt="SDM Mobile Logo"
-                  width={56}
-                  height={56}
-                  priority
-                  style={{ objectFit: "contain" }}
-                />
+                    src="/assets/images/logo.png"
+                    alt="SDM Mobile Logo"
+                    width={56}
+                    height={56}
+                    priority
+                    style={{ objectFit: "contain" }}
+                  />
                 <div className="text-start">
                   <h3 className="fw-bold mb-0">SDM Admin</h3>
                   <p className="text-muted mb-0">Shree Dhandai Mata Mobile</p>
