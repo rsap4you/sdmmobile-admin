@@ -2,15 +2,15 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { MdDashboard, MdBuild, MdOutlineMessage, MdOutlineShoppingBag } from "react-icons/md";
 import { BiLogOut } from "react-icons/bi";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { userLogout } from "@/redux/auth/auth-action";
 import { closeMobileSidebar } from "@/redux/ui/ui-slice";
-
+import { MdDashboard, MdBuild, MdOutlineMessage, MdOutlineShoppingBag, MdPeople } from "react-icons/md";
 const menuItems = [
   { title: "Dashboard", path: "/dashboard", Icon: MdDashboard },
   { title: "Repairs", path: "/repairs", Icon: MdBuild },
+  { title: "Users", path: "/users", Icon: MdPeople },
   { title: "Products", path: "/products", Icon: MdOutlineShoppingBag },
   { title: "Messages", path: "/messages", Icon: MdOutlineMessage },
 ];
