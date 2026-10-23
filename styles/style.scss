@@ -1,0 +1,44 @@
+/* ===============================
+   Settings (GLOBAL – must use @import)
+================================ */
+
+// Bootstrap requirements first
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+// Your variable overrides (must be global)
+@import "./settings/color-variables";
+@import "./settings/bootstrap-variables";
+@import "./settings/theme-variables";
+
+/* ===============================
+   Bootstrap (framework)
+================================ */
+
+@import "bootstrap/scss/bootstrap";
+
+/* ===============================
+   App styles
+================================ */
+
+// main framework
+@import "themes/generic";
+@import "themes/general";
+
+// Layouts
+@import "themes/layouts/pc-sidebar";
+@import "themes/layouts/pc-header";
+@import "themes/layouts/pc-footer";
+@import "themes/layouts/pc-common";
+
+// Components
+@import "themes/components/button";
+@import "themes/components/dropdown";
+@import "themes/components/card";
+@import "themes/components/form";
+
+// Pages
+@import "themes/pages/authentication";
+@import "themes/pages/icon-lauouts";

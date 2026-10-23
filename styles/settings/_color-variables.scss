@@ -1,0 +1,80 @@
+// Gray scale
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Brand colors
+$blue-500: #0d6efd;
+$indigo-500: #6610f2;
+$purple-500: #6f42c1;
+$pink-500: #d63384;
+$red-500: #dc3545;
+$orange-500: #fd7e14;
+$yellow-500: #ffc107;
+$green-500: #198754;
+$teal-500: #20c997;
+$cyan-500: #0dcaf0;
+
+
+
+
+// // =======================================
+// //   Base colors
+// // =======================================
+// $theme-500: #ff3366;
+
+// // Grayscale
+// $white: #ffffff;
+// $black: #000000;
+
+// $gray-100: #f8f9fa;
+// $gray-200: #f3f5f7;
+// $gray-300: #dbe0e5;
+// $gray-400: #bec8d0;
+// $gray-500: #8996a4;
+// $gray-600: #5b6b79;
+// $gray-700: #3e4853;
+// $gray-800: #1d2630;
+// $gray-900: #131920;
+
+// =======================================
+//   Preset color map (IMPORTANT)
+// =======================================
+$preset-colors: (
+  blue: (
+    primary: #4680ff
+  ),
+  indigo: (
+    primary: #6610f2
+  ),
+  purple: (
+    primary: #673ab7
+  ),
+  pink: (
+    primary: #e83e8c
+  ),
+  red: (
+    primary: #dc2626
+  ),
+  orange: (
+    primary: #fd7e14
+  ),
+  yellow: (
+    primary: #e58a00
+  ),
+  green: (
+    primary: #2ca87f
+  ),
+  teal: (
+    primary: #008080
+  ),
+  cyan: (
+    primary: #3ec9d6
+  )
+);

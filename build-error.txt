@@ -1,0 +1,155 @@
+﻿Γû▓ Next.js 16.4.2 (Turbopack)
+- Environments: .env
+node.exe : ΓÜá Warning: Next.js ignored package-lock.json in C:\Users\HP because it would include your home directory 
+(C:\Users\HP).
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá Warning: Ne... (C:\Users\HP).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ To use this directory, set `turbopack.root` in your Next.js config.
+
+Γ£ô Running next.config.ts took 67ms
+
+  Creating an optimized production build ...
+Turbopack build encountered 3 warnings:
+./styles/scss/style-preset.scss
+Warning: Issue while running loader
+SassWarning: Deprecation Warning on line 34, column 17 of file:///C:/Users/HP/OneDrive/Documents/website%20design/sdm-mob
+ile-full/sdm-mobile/sdm-admin/sdm-admin/styles/scss/style-preset.scss:34:17:
+The Sass if() syntax is deprecated in favor of the modern CSS syntax.
+
+Suggestion: if(sass(color-contrast($value) == $color-contrast-light): shade-color($value, $link-shade-percentage); else: 
+tint-color($value, $link-shade-percentage))
+
+More info: https://sass-lang.com/d/if-function
+
+34 |           color: if(
+            color-contrast($value) == $color-contrast-light,
+            shade-color($value, $link-shade-percentage),
+            tint-color($value, $link-shade-percentage)
+          ) !important; // stylelint-disable-line declaration-no-important
+
+
+styles\scss\style-preset.scss 35:18  root stylesheet
+
+
+
+./styles/scss/style-preset.scss
+Warning: Issue while running loader
+SassWarning: Deprecation Warning on line 51, column 41 of file:///C:/Users/HP/OneDrive/Documents/website%20design/sdm-mob
+ile-full/sdm-mobile/sdm-admin/sdm-admin/styles/scss/style-preset.scss:51:41:
+The Sass if() syntax is deprecated in favor of the modern CSS syntax.
+
+Suggestion: if(sass($enable-important-utilities): !important)
+
+More info: https://sass-lang.com/d/if-function
+
+51 |       color: color-contrast($pc-primary) if($enable-important-utilities, !important, null);
+
+
+styles\scss\style-preset.scss 52:42  root stylesheet
+
+
+
+./styles/scss/style-preset.scss
+Warning: Issue while running loader
+SassWarning: Deprecation Warning on line 52, column 73 of file:///C:/Users/HP/OneDrive/Documents/website%20design/sdm-mob
+ile-full/sdm-mobile/sdm-admin/sdm-admin/styles/scss/style-preset.scss:52:73:
+The Sass if() syntax is deprecated in favor of the modern CSS syntax.
+
+Suggestion: if(sass($enable-important-utilities): !important)
+
+More info: https://sass-lang.com/d/if-function
+
+52 |       background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, 
+!important, null);
+
+
+styles\scss\style-preset.scss 53:74  root stylesheet
+
+
+
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./styles/scss/style-preset.scss
+Error: Error evaluating Node.js code
+Error: Can't find stylesheet to import.
+  Γò╖
+3 Γöé @import 'node_modules/bootstrap/scss/functions';
+  Γöé         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Γò╡
+  styles\scss\style-preset.scss 3:9  root stylesheet
+  (from C:\Users\HP\OneDrive\Documents\website design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\next\di
+st\build\webpack\loaders\resolve-url-loader\index.js, C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\next\dist\compiled\sass-loader\cjs.js)
+Caused by: Error: Can't find stylesheet to import.
+  Γò╖
+3 Γöé @import 'node_modules/bootstrap/scss/functions';
+  Γöé         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Γò╡
+  styles\scss\style-preset.scss 3:9  root stylesheet
+    [at Object.wrapException (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:2317:47)]
+    [at C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:93020:25]
+    [at _wrapJsFunctionForAsync_closure.$protected (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:4988:15)]
+    [at _wrapJsFunctionForAsync_closure.call$2 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39503:12)]
+    [at _awaitOnObject_closure.call$1 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39491:32)]
+    [at StaticClosure._rootRunUnary (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:5412:18)]
+    [at _CustomZone.runUnary$2$2 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:40958:39)]
+    [at _Future__propagateToListeners_handleValueCallback.call$0 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39992:51)]
+    [at Object._Future__propagateToListeners (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:5198:93)]
+    [at _Future._completeWithValue$1 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39855:9)]
+
+
+./styles/scss/style.scss
+Error: Error evaluating Node.js code
+Error: Can't find stylesheet to import.
+  Γò╖
+2 Γöé @import 'node_modules/bootstrap/scss/functions';
+  Γöé         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Γò╡
+  styles\scss\style.scss 2:9  root stylesheet
+  (from C:\Users\HP\OneDrive\Documents\website design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\next\di
+st\build\webpack\loaders\resolve-url-loader\index.js, C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\next\dist\compiled\sass-loader\cjs.js)
+Caused by: Error: Can't find stylesheet to import.
+  Γò╖
+2 Γöé @import 'node_modules/bootstrap/scss/functions';
+  Γöé         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Γò╡
+  styles\scss\style.scss 2:9  root stylesheet
+    [at Object.wrapException (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:2317:47)]
+    [at C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:93020:25]
+    [at _wrapJsFunctionForAsync_closure.$protected (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:4988:15)]
+    [at _wrapJsFunctionForAsync_closure.call$2 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39503:12)]
+    [at _awaitOnObject_closure.call$1 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39491:32)]
+    [at StaticClosure._rootRunUnary (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:5412:18)]
+    [at _CustomZone.runUnary$2$2 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:40958:39)]
+    [at _Future__propagateToListeners_handleValueCallback.call$0 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39992:51)]
+    [at Object._Future__propagateToListeners (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:5198:93)]
+    [at _Future._completeWithValue$1 (C:\Users\HP\OneDrive\Documents\website 
+design\sdm-mobile-full\sdm-mobile\sdm-admin\sdm-admin\node_modules\sass\sass.dart.js:39855:9)]
+
+
+    at ignore-listed frames

@@ -1,0 +1,200 @@
+$choices-selector: 'choices' !default;
+
+/* sizing */
+$choices-font-size-lg: 16px !default;
+$choices-font-size-md: 14px !default;
+$choices-font-size-sm: 12px !default;
+$choices-guttering: 5px !default;
+
+/* colors */
+$choices-bg-color: $input-bg !default;
+$choices-bg-color-disabled: $input-disabled-bg !default;
+$choices-bg-color-dropdown: $input-bg !default;
+$choices-text-color: $input-color !default;
+$choices-keyline-color: $input-border-color !default;
+$choices-primary-color: var(--bs-primary) !default;
+$choices-disabled-color: $input-disabled-bg !default;
+$choices-highlight-color: $choices-primary-color !default;
+
+/* borders */
+$choices-border-radius: $input-border-radius !default;
+$choices-border-radius-item: $input-border-radius !default;
+
+/* buttons */
+$choices-button-dimension: 8px !default;
+$choices-button-offset: 8px !default;
+
+/* icons */
+$choices-icon-cross: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSI+PC9zdmc+') !default;
+$choices-icon-cross-inverse: $choices-icon-cross !default;
+
+/* ============================
+
+/* ============================
+   Form css start
+============================ */
+
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+select.form-control,
+.form-control {
+  &:hover {
+    background-color: $gray-100;
+  }
+
+  &[readonly] {
+    opacity: 0.6;
+  }
+}
+
+.input-group-text svg {
+  width: 18px;
+  height: 18px;
+}
+
+.form-control-color-picker {
+  height: 43px;
+  padding: 0.5rem;
+}
+
+select.form-control {
+  appearance: none;
+  background: #{$input-bg}
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
+    no-repeat right 0.75rem center/18px 25px;
+
+  &[data-multiselectsplitter-firstselect-selector],
+  &[data-multiselectsplitter-secondselect-selector] {
+    background: none;
+  }
+}
+
+.form-floating {
+  > label {
+    top: 1px;
+  }
+
+  > .form-control:focus,
+  > .form-control:not(:placeholder-shown),
+  > .form-select {
+    ~ label {
+      color: $gray-600;
+    }
+  }
+
+  > .form-control:focus {
+    ~ label {
+      color: $component-active-bg;
+    }
+  }
+
+  > input {
+    color: $body-color;
+  }
+}
+
+/* ============================
+   Choices selector FIXED
+============================ */
+
+$choices-keyline-color: $input-border-color !default;
+
+.#{$choices-selector}__list--dropdown {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  background-color: $choices-bg-color-dropdown;
+  border: 1px solid $choices-keyline-color;
+  top: 100%;
+  margin-top: -1px;
+  border-bottom-left-radius: $choices-border-radius;
+  border-bottom-right-radius: $choices-border-radius;
+
+  &.is-active {
+    visibility: visible;
+  }
+
+  /* ✅ FIX: removed darken() */
+  .is-open & {
+    border-color: $choices-keyline-color;
+  }
+
+  .is-flipped & {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: -1px;
+  }
+}
+
+.#{$choices-selector}__heading {
+  font-weight: 600;
+  font-size: $choices-font-size-sm;
+  padding: 10px;
+
+  /* ✅ FIX: removed lighten() */
+  border-bottom: 1px solid $choices-keyline-color;
+  color: #777;
+}
+
+/* ============================
+   Tagify FIX
+============================ */
+
+.tagify__tag {
+  --tag-bg: #{$body-bg};
+  --tag-hover: #{rgba($primary, 0.3)};
+  --tag-remove-bg: #{rgba($danger, 0.3)};
+  --tag-remove-btn-bg--hover: #{$danger};
+
+  @each $color, $value in $theme-colors {
+    &.tagify__tag--#{$color} {
+      --tag-bg: #{rgba($value, 0.15)};
+
+      .tagify__tag-text {
+        color: $value;
+      }
+    }
+  }
+}
+
+/* ============================
+   Form validation
+============================ */
+
+.validate-me {
+  .error {
+    border-color: $danger;
+  }
+}
+
+.error-message {
+  color: $danger;
+}
+
+.flatpickr-input[readonly] {
+  background: $input-bg;
+}
+
+.noUi-connect {
+  background: var(--bs-primary);
+}
+
+/* ============================
+   Form css end
+============================ */

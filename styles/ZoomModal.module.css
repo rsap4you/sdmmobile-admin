@@ -1,0 +1,220 @@
+/* Image Gallery */
+.imageGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  /* Fade-in animation for gallery */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Image Thumbnails */
+.imageThumbnail {
+  width: 100%;
+  height: auto;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  transform: scale(1);
+  /* Initial scale */
+}
+
+.imageThumbnail:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+  border-color: #007bff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeInModal 0.5s forwards;
+  /* Modal fade-in */
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Modal Image */
+.modalImage {
+  margin: 20px;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+  transform: scale(0.95);
+  transition: transform 0.5s ease;
+}
+
+.modalImage:hover {
+  transform: scale(1);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* Adjust position */
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  /* Make sure it's above other elements */
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.close:hover,
+.close:focus {
+  color: #ff6f61;
+  /* Change color on hover */
+  transform: rotate(90deg) scale(1.1);
+  /* Rotate and scale up slightly */
+}
+
+/* Mobile Responsiveness: Media Queries */
+@media (max-width: 768px) {
+  .imageGallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  /* For larger modal image size on mobile */
+  .modalImage {
+    max-width: 95%;
+    /* Slightly smaller max width */
+    max-height: 80%;
+    /* Slightly smaller height */
+    margin: 10px;
+  }
+
+  /* Adjust Close Icon on small screens */
+  .close {
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    /* Smaller close icon */
+  }
+}
+
+@media (max-width: 480px) {
+  .imageGallery {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    /* Smaller thumbnails */
+    gap: 8px;
+  }
+
+  /* Further reduce modal image size on very small screens */
+  .modalImage {
+    max-width: 90%;
+    /* Even smaller for compact screens */
+    max-height: 70%;
+    /* Adjust height */
+    margin: 5px;
+  }
+
+  /* Adjust Close Icon on mobile */
+  .close {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    /* Smaller icon for smaller screens */
+  }
+}
+
+/* Navigation Buttons (Prev and Next) */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+  /* Slight scale up on hover */
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+
+  .prev,
+  .next {
+    font-size: 32px;
+    padding: 8px;
+  }
+
+  .prev {
+    left: 15px;
+  }
+
+  .next {
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .prev,
+  .next {
+    font-size: 28px;
+    padding: 6px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+}
