@@ -54,14 +54,6 @@ const Login = () => {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                     />
-                    <button
-                      type="button"
-                      className="btn btn-outline-secondary"
-                      onClick={() => setShow(!show)}
-                      aria-label={show ? "Hide password" : "Show password"}
-                    >
-                      {show ? <FaEyeSlash /> : <FaEye />}
-                    </button>
                     {invalid && <div className="invalid-feedback">{formik.errors.password}</div>}
                   </div>
                 </div>
