@@ -35,19 +35,20 @@ const Login = () => {
         <div className="auth-form">
           <div className="card">
             <div className="card-body">
-           <div className="text-center mb-4">
-  <Image
-    src="/logo.png"
-    alt="SDM Mobile Logo"
-    width={80}
-    height={80}
-    priority
-    className="mb-3"
-    style={{ objectFit: "contain" }}
-  />
-  <h3 className="fw-bold mb-1">SDM Admin</h3>
-  <p className="text-muted mb-0">Shree Dhandai Mata Mobile</p>
-</div>
+              <div className="d-flex align-items-center justify-content-center gap-3 mb-4">
+                <Image
+                  src="/logo.png"
+                  alt="SDM Mobile Logo"
+                  width={56}
+                  height={56}
+                  priority
+                  style={{ objectFit: "contain" }}
+                />
+                <div className="text-start">
+                  <h3 className="fw-bold mb-0">SDM Admin</h3>
+                  <p className="text-muted mb-0">Shree Dhandai Mata Mobile</p>
+                </div>
+              </div>
               <h5 className="text-center f-w-500 mt-3">Enter the admin password</h5>
 
               <form className="row g-3" onSubmit={formik.handleSubmit}>
